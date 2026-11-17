@@ -1,0 +1,21 @@
+<article class="card">
+    <section class="carrousel">
+        <img [src]="product.variants[selectedVariant].imageUrl" 
+             [alt]="product.variants[selectedVariant].name">
+        <h3>{{product.name}}</h3>
+        <p class="price">${{product.price}}</p>
+        <p class="variant-name">Variante: <strong>{{ product.variants[selectedVariant].name }}</strong></p>
+
+    <div class="variants-thumbnails">
+        @for (variant of product.variants; track variant.name; let i = $index){
+            <button 
+                [class.active]="$index === selectedVariant"
+                (click)="selectedVariant = $index">
+                <img [src]="variant.imageUrl" [alt]="variant.name" />
+            </button>
+        }
+    </div>
+    <button class="buy-btn">Ver detalle</button>
+    
+    </section>
+</article>
