@@ -1,3 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lexend:wght@100..900&family=Lugrasimo&family=Major+Mono+Display&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Lexend:wght@100..900&family=Lugrasimo&family=Major+Mono+Display&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+
+.plus-jakarta-sans {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.cinzel {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.space-mono-bold {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.space-mono-regular-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.space-mono-bold-italic {
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  font-style: italic;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -5,6 +47,20 @@
     border: 0;  
     font-size: 100%;
     font:inherit;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  min-width: 320px;
+  background: #fffdf9;
+  color: #382b25;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  line-height: 1.6;
+}
+:focus-visible {
+  outline: 3px solid #96482e;
+  outline-offset: 3px;
 }
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section, main {
@@ -32,3 +88,10 @@ img, svg, video, canvas, audio {
   max-width: 100%;
   height: auto;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; }
+}
+
+

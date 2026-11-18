@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { WspButton } from '../wsp-button/wsp-button';
 
 @Component({
   selector: 'app-card',
-  imports: [CommonModule],
+  imports: [CommonModule, WspButton],
   templateUrl: './card.html',
   styleUrl: './card.css',
 })

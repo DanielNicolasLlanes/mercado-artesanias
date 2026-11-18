@@ -1,0 +1,13 @@
+<nav class="category-filter" aria-label="Filtrar productos por categoría">
+  @for (category of categories(); track category.id) {
+    <button
+      type="button"
+      class="category-filter__button"
+      [class.category-filter__button--selected]="selectedCategory() === category.id"
+      [attr.aria-pressed]="selectedCategory() === category.id"
+      (click)="categoryChange.emit(category.id)"
+    >
+      {{ category.label }}
+    </button>
+  }
+</nav>

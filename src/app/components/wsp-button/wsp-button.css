@@ -1,0 +1,17 @@
+.wsp-button {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1rem;
+  border-radius: 0.4rem;
+  background: #258b55;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background 160ms ease;
+}
+
+.wsp-button:hover { background: #1d7044; }
+.wsp-button:focus-visible { outline: 3px solid #174f33; outline-offset: 2px; }

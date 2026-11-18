@@ -17,19 +17,25 @@ export class ProductService {
     ]
 
     public products: Product[] = [
-    {id: 1, name: 'Producto 1', description: 'Descripción del producto 1', price: 10.99, 
-      category: "alcancias",
-      variants: [{name: 'Variante 1', color: 'Rojo', imageUrl: 'url1'}, 
-                 {name: 'Variante 2', color: 'Azul', imageUrl: 'url2'}]},
-
-    {id:2, name: 'Producto 2', description: 'Descripción del producto 2', price: 15.99, 
-      category: "religiosas",
-      variants: [{name: 'Variante 1', color: 'Verde', imageUrl: 'url3'}, 
-                 {name: 'Variante 2', color: 'Amarillo', imageUrl: 'url4'}]},
-
-    {id:3, name: 'Producto 3', description: 'Descripción del producto 3', price: 20.99, 
-      category: "jardin",
-      variants: [{name: 'Variante 1', color: 'Negro', imageUrl: 'url5'}, 
-                 {name: 'Variante 2', color: 'Blanco', imageUrl: 'url6'}]}
-  ]
+      { id: 1, name: 'Animales 1', description: 'Figura decorativa de animal', price: 10.99,
+        category: 'animales', imageUrl: '/catalog/animales-1.jpg', variants: [] },
+      { id: 2, name: 'Animales 2', description: 'Figura decorativa de animal', price: 15.99,
+        category: 'animales', imageUrl: '/catalog/animales-2-variante-a.jpg', variants: [
+          { name: 'Variante A', color: 'A', imageUrl: '/catalog/animales-2-variante-a.jpg' },
+          { name: 'Variante B', color: 'B', imageUrl: '/catalog/animales-2-variante-b.jpg' },
+          { name: 'Variante C', color: 'C', imageUrl: '/catalog/animales-2-variante-c.jpg' },
+        ] },
+      { id: 3, name: 'Sahumerios 1', description: 'Cascada o sahumerio', price: 20.99,
+        category: 'sahumerios', imageUrl: '/catalog/saumerios-1.jpg', variants: [] },
+      { id: 4, name: 'Sahumerios 2', description: 'Cascada o sahumerio', price: 20.99,
+        category: 'sahumerios', imageUrl: '/catalog/saumerios-2.jpg', variants: [] },
+      { id: 5, name: 'Sahumerios 3', description: 'Cascada o sahumerio', price: 20.99,
+        category: 'sahumerios', imageUrl: '/catalog/saumerios-3.jpg', variants: [] },
+      { id: 6, name: 'Religiosas 1', description: 'Figura religiosa', price: 15.99,
+        category: 'religiosas', imageUrl: '/catalog/religiosas-1.jpg', variants: [] },
+      { id: 7, name: 'Religiosas 2', description: 'Figura religiosa', price: 15.99,
+        category: 'religiosas', imageUrl: '/catalog/religiosas-2.jpg', variants: [] },
+      { id: 8, name: 'Otros 1', description: 'Artículo de decoración', price: 10.99,
+        category: 'otros', imageUrl: '/catalog/otros-1.jpg', variants: [] },
+    ];
 }

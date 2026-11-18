@@ -1,21 +1,27 @@
 <article class="card">
     <section class="carrousel">
-        <img [src]="product.variants[selectedVariant].imageUrl" 
-             [alt]="product.variants[selectedVariant].name">
+        <img [src]="product.variants.length ? product.variants[selectedVariant].imageUrl : product.imageUrl"
+             [alt]="product.variants.length ? product.variants[selectedVariant].name : product.name">
         <h3>{{product.name}}</h3>
         <p class="price">${{product.price}}</p>
-        <p class="variant-name">Variante: <strong>{{ product.variants[selectedVariant].name }}</strong></p>
+        @if (product.variants.length) {
+            <p class="variant-name">Variante: <strong>{{ product.variants[selectedVariant].name }}</strong></p>
 
-    <div class="variants-thumbnails">
-        @for (variant of product.variants; track variant.name; let i = $index){
-            <button 
-                [class.active]="$index === selectedVariant"
-                (click)="selectedVariant = $index">
-                <img [src]="variant.imageUrl" [alt]="variant.name" />
-            </button>
+            <div class="variants-thumbnails">
+                @for (variant of product.variants; track variant.name; let i = $index){
+                    <button
+                        [class.active]="$index === selectedVariant"
+                        (click)="selectedVariant = $index">
+                        <img [src]="variant.imageUrl" [alt]="variant.name" />
+                    </button>
+                }
+            </div>
         }
-    </div>
     <button class="buy-btn">Ver detalle</button>
+    <app-wsp-button
+        [product]="product"
+        [selectedVariant]="product.variants.length ? product.variants[selectedVariant] : undefined">
+    </app-wsp-button>
     
     </section>
 </article>

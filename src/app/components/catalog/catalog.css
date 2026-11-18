@@ -1,0 +1,38 @@
+.catalog-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 4vw, 2.5rem);
+}
+
+.catalog-container > h2 {
+  margin-bottom: 1.75rem;
+  color: #713a29;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2.15rem);
+  text-align: center;
+}
+
+/* Flexbox keeps the product list responsive without imposing fixed columns. */
+.catalog-container .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.25rem;
+}
+
+.catalog-container .grid > li {
+  display: flex;
+  flex: 1 1 15rem;
+  max-width: 21rem;
+  min-width: min(100%, 15rem);
+}
+
+.catalog-container .grid > .empty-state {
+  display: block;
+  flex: 1 1 100%;
+  max-width: none;
+  padding: 2rem 1rem;
+  color: #713a29;
+  text-align: center;
+}

@@ -1,0 +1,67 @@
+.card {
+  display: flex;
+  width: 100%;
+  padding: 0.85rem;
+  overflow: hidden;
+  border: 1px solid #eadfd5;
+  border-radius: 0.75rem;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(74, 47, 32, 0.06);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(74, 47, 32, 0.12);
+}
+
+.carrousel {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+}
+
+.carrousel > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 0.45rem;
+  background: #f6eee7;
+  object-fit: cover;
+}
+
+.carrousel h3 { color: #49352a; font-size: 1.05rem; }
+.price { color: #8c472f; font-size: 1.1rem; font-weight: 700; }
+.variant-name { color: #756258; font-size: 0.85rem; }
+
+.variants-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.variants-thumbnails button {
+  width: 2.75rem;
+  height: 2.75rem;
+  overflow: hidden;
+  border: 1px solid #ddcabc;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.variants-thumbnails button.active { border: 2px solid #96482e; }
+.variants-thumbnails img { width: 100%; height: 100%; object-fit: cover; }
+
+.buy-btn {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.65rem 1rem;
+  border-radius: 0.4rem;
+  background: #87452f;
+  color: #fffaf4;
+  cursor: pointer;
+  transition: background 160ms ease;
+}
+
+.buy-btn:hover { background: #693522; }
